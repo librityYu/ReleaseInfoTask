@@ -2,6 +2,7 @@
 buildscript {
     ext.kotlin_version = "1.5.10"
     repositories {
+
         maven {
             url 'https://maven.aliyun.com/repository/gradle-plugin'
         }
@@ -9,7 +10,9 @@ buildscript {
             url 'https://maven.aliyun.com/repository/central'
         }
         google()
-        mavenLocal()
+        maven{//添加以下配置
+            url 'https://raw.githubusercontent.com/librityYu/ReleaseInfoTask/maven'
+        }
 
         mavenCentral()
     }
@@ -33,7 +36,7 @@ allprojects {
         }
         google()
         mavenCentral()
-        mavenLocal()
+
         maven { url "https://jitpack.io" }
     }
 }
